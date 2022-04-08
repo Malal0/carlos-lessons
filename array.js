@@ -35,10 +35,30 @@
 const fruits = [{ fruit: "apple", isSweet: true, price: 1 }, { fruit: "orange", isSweet: true, price: 1 }, { fruit: "watermelon", isSweet: true, price: 8 }, { fruit: "avocado", isSweet: false, price: 3 }, { fruit: "eggplant", isSweet: false, price: 4 }];
 
 const ul = document.querySelector("ul");
+const body = document.querySelector("body");
 
 fruits.forEach(fruit => {
     const li = document.createElement("li");
     li.innerText = fruit.fruit;
     ul.appendChild(li);
+    console.log(fruit.fruit);
+    var msg = new SpeechSynthesisUtterance();
+    msg.text = fruit.fruit;
+    msg.rate = 1.5;
+    msg.volume = 1;
+    msg.pitch = 2;
+    window.speechSynthesis.speak(msg);
 });
+
+
+
+
+// const sweetFruits = fruits.filter((fruit) => {
+//     return fruit.isSweet === true;
+// });
+// console.log(sweetFruits);
+
+// sweetFruits.forEach(fruit =>{
+
+// })
 
