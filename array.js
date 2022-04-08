@@ -50,15 +50,11 @@ fruits.forEach(fruit => {
     window.speechSynthesis.speak(msg);
 });
 
+//btn.addEventListener("click", ());
+const sweetFruits = fruits.filter((fruit) => {
+    return fruit.isSweet === true;
+});
 
-
-
-// const sweetFruits = fruits.filter((fruit) => {
-//     return fruit.isSweet === true;
-// });
-// console.log(sweetFruits);
-
-// sweetFruits.forEach(fruit =>{
+// sweetFruits.forEach(fruit => {
 
 // })
-
